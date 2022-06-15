@@ -82,7 +82,7 @@ header .logo {
     display: block;
     margin: 0 auto 5px auto;
     padding-top: 0.5em;
-    width: 30%;
+    width: 25%;
     min-width:220px;
 }
 
@@ -235,7 +235,7 @@ article h1 {
 .section-img-left {
     display: grid;
     grid-template-columns: 5fr 4fr;
-    align-items: center;
+    justify-items: center;
     
 }
 
