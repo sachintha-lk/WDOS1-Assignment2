@@ -1,0 +1,608 @@
+/* Global Styles */
+
+* {
+    margin: 0;
+    padding:0;
+}
+html {
+    scroll-behavior: smooth;
+  }
+
+ul, ol {
+    padding:0.5rem;
+    margin:0.5rem;
+}
+p {
+    padding: 5px 10px;
+    margin: 5px 0;
+}
+:root {
+    --main-bg-color:#f0f0f0; 
+    --main-light-color: #7FB5FF;
+    --main-dark-color: #346cba;
+    --main-darker-color: #14004b; ;
+    --nav-text-active-pg-color:#fff;
+    --nav-text-color:#d8d8d8;
+    --shadow-color:rgba(0, 0, 0, 0.2);
+}
+
+h1 , h2 , h3{
+    color:var(--main-darker-color) ;
+    padding: .5rem 0;
+}
+
+
+h2 {
+    font-size: 2rem;
+}
+
+h3 {
+    font-size: 1.8rem;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 17px;
+    background-color: var(--main-bg-color);
+    line-height: 1.5;
+}
+
+.page-container {
+    width:90%;
+    margin: 0 auto;
+    box-shadow: 10px 0 2rem var(--shadow-color),
+            -10px 0 2rem var(--shadow-color);
+}
+
+img {
+    width:100%;
+}
+section, footer {
+    padding: 0.5rem 2rem;
+}
+.top-btn {
+    position: fixed;
+    bottom: 1rem;
+    right: .2rem;;
+}
+
+.position-static {
+    position:static !important;
+}
+/* Header styles*/
+header {
+    background-color: var(--main-bg-color);
+    width:100%;
+    position: relative;
+    z-index: 1000;
+    padding-bottom: 5px;
+}
+
+header .logo {
+    display: block;
+    margin: 0 auto 5px auto;
+    padding-top: 0.5em;
+    width: 30%;
+    min-width:220px;
+}
+
+#mainNav {
+    text-transform: uppercase;
+    background-color: var(--main-darker-color);
+    padding: 5px;
+    position: sticky;  
+    top: 0;
+    z-index: 10;
+
+}
+
+#mainNav ul {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    line-height: 1.5;
+    
+}
+
+#mainNav li {
+    list-style-type: none;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+#mainNav a {
+    text-decoration: none;
+    padding: 10px;
+    color: var(--nav-text-color);
+}
+
+#mainNav #current-pg {
+    color: var(--nav-text-active-pg-color);
+    background: rgb(255,255,255,0.1);
+
+}
+
+#mainNav a:hover, #mainNav #current-pg:hover {
+    color: var(--main-light-color); 
+}
+
+/* footer */
+footer {
+    background-color: var(--main-darker-color);
+    padding: 10px 0 0 0;
+    color: var(--main-bg-color);
+    line-height: 1.5;
+}
+footer .logo {
+    width: 60%;
+    height: auto;
+    margin-left: 20px;
+    margin-top: 20px;
+    min-width: 220px;
+    
+}
+
+footer #copyright {
+    background-color: black;
+    color: #ffffff;
+    padding-left: 10px;
+}
+
+#footer-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+#footer-container div {
+    text-align: center;
+    justify-content: center;
+}
+footer ul {
+    list-style: none;
+}
+
+footer a {
+    color:var(--main-bg-color);
+}
+footer a:hover {
+    color: var(--main-light-color);
+}
+
+#sm-icon-container {
+    display: flex;
+    align-items: stretch;
+    margin-bottom: 0.8rem;
+}
+.sm-icons {
+    display: block;
+    width: 1.7rem;
+    height: 1.7rem;
+    margin: 0 0.4rem;
+    filter: invert(100%);
+}
+#facebook-logo {
+    background: url("../images/logos/facebook.svg");
+}
+#instagram-logo {
+    background: url("../images/logos/instagram.svg");
+}
+
+#youtube-logo {
+    background: url("../images/logos/youtube.svg");
+}
+#twitter-logo {
+    background: url("../images/logos/twitter.svg");
+}
+
+/* article styles */
+article img{
+    display:block;
+    width: 90%;
+    height: auto;
+    box-shadow: 3px 3px 10px var(--shadow-color),
+                -3px -3px 10px var(--shadow-color);
+    margin: 0.5rem auto 0.5rem auto;
+
+}
+picture {
+    display: contents; /*The picture element's child img would be treated as direct children of picture's parent. Ignores pciture tag---so, img styling would work */
+}
+article img {
+    width: 95%;
+}
+
+article h1 {
+    text-align: center;
+    font-size: 3rem;
+    margin: 0;
+}
+
+.intro-container {
+    margin-bottom: 2rem;
+}
+
+
+.container-two-colors section:nth-of-type(odd) {
+    background:white;
+}
+.container-two-colors section:nth-of-type(even) {
+    background:var(--main-bg-color);
+}
+
+
+/* for divs inside section*/
+
+.section-img-left {
+    display: grid;
+    grid-template-columns: 5fr 4fr;
+    align-items: center;
+    
+}
+
+/*img-flex-container used in- Beaches pg,wildlife pg */
+.img-flex-container {
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.img-flex-container img {
+    width: 25vw;
+    border-radius: 5%;
+}
+
+
+/* cards with flex - used in home pg ,activities pg, and in purchases*/
+.cards {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content:space-evenly;    
+}
+.card-item {
+    position: relative;
+    padding: 0.1rem;
+    padding-bottom: 1rem;
+    width: 26vw;
+    background-color: #fff;
+    box-shadow: 3px 3px 5px var(--shadow-color),
+                 -3px -3px 5px var(--shadow-color);
+    text-align: center;
+    margin-bottom: 2rem;
+    border-radius: 5px;
+}
+.cards-4 .card-item {
+    width: 26vw;
+}
+
+.card-item-large {
+    width: 70vw;
+    margin: 2rem auto;
+}
+.card-item-bp {
+    padding-bottom:3rem;
+}
+
+.card-item img {
+    width: 98%;
+    box-shadow: none;
+}
+.card-item p {
+    padding-left:5px;
+    padding-right:5px;
+    margin: 10px;
+}
+
+.cards ol , .cards ul {
+    text-align: start;
+}
+
+.card-item ul, .card-item ol {
+    width: max-content;
+    margin: 0 auto;
+}
+
+.card-item .link-title {
+    text-decoration: none !important;
+}
+.card-item .link-title:hover {
+    text-decoration: underline !important;
+}
+
+
+.card-item .btn-blue {
+    position: absolute;
+    bottom: 0.5rem;
+    left: 0;
+    right: 0;
+    margin: 5px auto;
+}
+
+/* Blue button */
+.btn-blue {
+    display: block;
+    background-color: var(--main-dark-color);
+    padding: 10px;
+    text-decoration: none;
+    font-size: 1rem;
+    color:var(--main-bg-color);
+    border-radius: 15px;
+    margin: 5px;
+    width: max-content;
+    margin: 0.4rem auto;
+    white-space:nowrap;
+    transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+/* Home Page */
+
+#home-pg-h1 {
+    font-size: calc(5vw);
+    position: absolute;
+    top: 4em;
+    text-transform: uppercase;
+    width: 50%;
+    right: 1.1em;
+}
+
+#banner-img {
+    box-shadow: none;
+    padding: 0;
+    margin: -90px 0 0 0;
+    width: 100%;
+}
+
+
+#home-pg-container h2 {
+    text-align: center;
+    text-transform: capitalize
+}
+
+/* Wildlife pg */
+#atractions-container {
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.attractions {
+    width: 100px;
+
+}
+.map-iframe {
+    width: 100%;
+    height: 40vw;
+    margin: 0 auto;
+}
+table{
+    width: 100%;
+}
+table, th ,td {
+    border: 1px solid black;
+    /* for table borders use border-collapse so you dont have double borders*/
+    border-collapse: collapse;
+    margin: 0 auto;
+    text-align: center;
+}
+
+td, th {
+    padding:0.5rem;
+}
+table img {
+    width: 20vw;
+    margin: 0;
+    padding: 0;
+    box-shadow: none;
+}
+
+/* Purchase and donate pg*/
+
+#donate-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr ;
+    grid-template-columns: 1fr 1fr ;
+    text-align: center;
+    justify-items: center;
+}
+#donate-container h3 {
+    background-color: var(--main-darker-color);
+    color: var(--main-bg-color);
+    font-size: 100%;
+}
+#donate-container img{
+    width: 40%;
+    box-shadow: none;
+    align-items: center;
+    padding-bottom: .5rem;
+}
+
+#donate-container div {
+    box-shadow: 3px 3px 5px var(--shadow-color);
+    width: 70%;
+    background: #fff;
+    padding: 2rem 0;
+    margin: 0.5rem 0;
+}
+
+/* > 769px Desktops */
+@media only screen and (min-width:769px)
+{   
+    .btn-blue:hover{
+        background-color: var(--main-light-color);
+        box-shadow: 2px 2px 10px var(--shadow-color);
+        color: #000;
+        
+}
+@media only screen and (max-width:1100px) {
+    .section-img-left {
+        display: flex;
+        flex-flow: column nowrap;        
+    }
+    .section-img-left img {
+        width: 100%;
+        margin: 0;
+    }
+}
+    
+}
+/* < 769px Screens smaller than desktops */
+@media only screen and (max-width:769px)
+{   
+    h1 {
+        font-size: 50px;
+    }
+    #mainNav {
+       position: relative;
+    }
+    #mainNav a {
+        padding:10px;
+    }
+    #mainNav li {
+        margin: 8px 4px;
+    }
+    #mainNav ul {
+        display: flex;
+        flex-flow: row wrap;
+        margin: 0;
+        padding: 0;
+        
+    }
+    .page-container{
+        width:100%;
+        box-shadow: none
+    }        
+    .section-img-left {
+        display: flex;
+        flex-flow: column nowrap;        
+    }
+
+        
+    #home-pg-h1 {
+        font-size: calc(6vw);
+        position: relative;
+        top: calc(3em);
+        width: 100%;
+        margin-top:-3.2em;
+        right: auto;
+    }
+
+    #banner-img {
+        box-shadow: none;
+        padding: 0;
+        margin:0;
+        width: 100%;
+    }
+    article h1 {
+        font-size: 2.5rem;
+    }
+
+    h2, h3 {
+        text-align: center;
+    }
+
+    article img{
+        width:100%;
+    }
+
+    #footer-container{
+        display: flex;
+        flex-flow:column nowrap;
+    }
+
+    #copyright {
+        text-align: center;
+    }
+    .top-btn {
+        position: fixed;
+        bottom: 1.2rem;
+        right: 1rem;
+    }
+    .btn-blue:active {
+        background-color: var(--main-light-color);
+        box-shadow: 2px 2px 10px var(--shadow-color);
+        padding: 11px;
+        color: #000;
+        /* margin: 4px; */
+        transition: color 0.3s ease, background-color 0.3s ease;   
+    }
+    .btn-blue {
+        animation: 2s;
+    }
+    /* Cards */
+
+    .cards {
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content:space-around;    
+    }
+
+    .card-item {
+        width: 90vw;
+        margin: 0 auto 2rem auto;
+    }
+
+    .img-flex-container img {
+        width: 100%;
+        border-radius: 5%;
+    }
+    #purchase-section .card-item{
+        width: 70vw;
+    }
+
+    #donate-container {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
+    #donate-container img{
+        width: 60%;
+    }
+
+    #donate-container div {      
+        width: 95%;        
+    }
+
+    /* Responsive table for wildlife page*/
+	#table-section {
+        padding: 0.7rem;
+    }
+    
+    table, thead, tbody,tfoot, th, td, tr { 
+		display: block; 
+	}
+	
+	thead tr { 
+		position: absolute;
+		top: -9999px;
+		left: -9999px;
+	}
+	
+	tr { border: 1px solid rgb(70, 70, 70); }
+	
+	td { 
+		position: relative;
+		border: none;
+		border-bottom: 1px solid rgb(158, 158, 158); 
+        background-color: #d3d3d3;
+		padding-left: 40%; 
+	}
+
+    tfoot td {
+        position: relative ;
+        padding: 10px 0;
+    }
+	
+	td:before { 
+		position: absolute;
+		top: 0.5rem;
+		left: 0.5rem;
+        white-space: nowrap;
+        font-weight: 600;
+	}
+	
+	td:nth-of-type(1):before { content: "Name"; }
+	td:nth-of-type(2):before { content: "Image"; }
+	td:nth-of-type(3):before { content: "Scientific Name"; }
+	td:nth-of-type(4):before { content: "Habitat"; }
+	td:nth-of-type(5):before { content: "Food habits"; }
+    tfoot td:before  {
+        content:" " !important;
+    }
+}
