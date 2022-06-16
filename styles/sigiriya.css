@@ -321,6 +321,13 @@ h1,h2,p  {
         box-shadow: none
     }        
     
+    
+    h1 {
+    font-size: calc(15vw);
+    margin-top:-2em;
+    top: calc(2.9em);
+}
+
     h2, h3 {
         text-align: center;
     }

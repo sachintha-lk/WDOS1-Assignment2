@@ -28,7 +28,7 @@ p {
 
 h1 , h2 , h3{
     color:var(--main-darker-color) ;
-    padding: .5rem 0;
+    padding: .5rem 2rem;
 }
 
 
@@ -337,7 +337,7 @@ article h1 {
 #home-pg-h1 {
     font-size: calc(5vw);
     position: absolute;
-    top: 4em;
+    top: 3.8em;
     text-transform: uppercase;
     width: 50%;
     right: 1.1em;
@@ -472,15 +472,19 @@ table img {
         display: flex;
         flex-flow: column nowrap;        
     }
-
         
     #home-pg-h1 {
-        font-size: calc(6vw);
+        font-size: calc(8vw);
         position: relative;
-        top: calc(3em);
+        top: 4em;
+        right: 0.8em;
         width: 100%;
-        margin-top:-3.2em;
-        right: auto;
+        margin-top:-4em;;
+        text-align: right;      
+    }
+
+    h1, h2 {
+        padding: .5rem 0rem;
     }
 
     #banner-img {
