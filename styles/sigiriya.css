@@ -18,7 +18,7 @@ ul, ol {
     --main-bg-color:#f0f0f0; 
     --main-light-color: #7FB5FF;
     --main-dark-color: #346cba;
-    --main-darker-color: #14004b; ;
+    --main-darker-color: #14004b;
     --nav-text-active-pg-color:#fff;
     --nav-text-color:#d8d8d8;
     --shadow-color:rgba(0, 0, 0, 0.2);
@@ -296,6 +296,7 @@ h1,h2,p  {
     .card-item {
         width: 45%;
     }
+
 }
 /* < 769px */
 @media only screen and (max-width:769px)
@@ -336,6 +337,10 @@ h1,h2,p  {
         display: flex;
         flex-flow:column nowrap;
     }
+    footer .logo {
+        width: 25%;
+        min-width: 220px;
+     }
 
     #copyright {
         text-align: center;
@@ -348,16 +353,10 @@ h1,h2,p  {
     .btn-blue {
         animation: none;
     }
+}
 
-
-    /*----*/
-    .img-flex-container img {
-        width: 100%;
-        border-radius: 5%;
-    }
-
+@media only screen and (max-width:559px) {
     .card-item {
         width: 90%;
     }
-
 }
