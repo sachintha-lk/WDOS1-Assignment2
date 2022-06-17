@@ -361,6 +361,9 @@ h1,h2,p  {
     }
 }
 @media only screen and (max-width:400px) {
+    p {
+        font-size: 0.95rem;
+    }
     h2 {
         font-size: 1.6rem;
     }

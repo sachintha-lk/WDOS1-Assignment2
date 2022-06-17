@@ -390,7 +390,7 @@ td, th {
 }
 table img {
     width: 20vw;
-    margin: 0;
+    margin: 0 auto;
     padding: 0;
     box-shadow: none;
 }
@@ -592,47 +592,56 @@ table img {
         padding: 0.7rem;
     }
     
-    table, thead, tbody,tfoot, th, td, tr { 
+    table :nth-child(n) { 
 		display: block; 
 	}
-	
+    td {
+        border: none;
+    }
+
+    tr :nth-last-child(5){
+        font-weight: 900;
+        background-color: var(--main-light-color);
+        border: 2px solid rgb(70, 70, 70);
+        border-left: none;
+        border-right: none;
+    }
+    table {
+        border: 2px solid rgb(70, 70, 70);
+    }
+    td img {
+        width: 75%;
+        box-shadow: 3px 3px 4px rgba(0, 0, 0, 0.2),-3px -3px 4px rgba(0, 0, 0, 0.2);
+    }
 	thead tr { 
 		position: absolute;
-		top: -9999px;
-		left: -9999px;
-	}
-	
-	tr { border: 1px solid rgb(70, 70, 70); }
-	
-	td { 
-		position: relative;
-		border: none;
-		border-bottom: 1px solid rgb(158, 158, 158); 
-        background-color: #d3d3d3;
-		padding-left: 40%; 
+		top: -100px;
+		left: -100px;
 	}
 
-    tfoot td {
-        position: relative ;
-        padding: 10px 0;
+    tr td:nth-child(3) {
+        background-color: rgb(230, 215, 255);
     }
-	
-	td:before { 
-		position: absolute;
-		top: 0.5rem;
-		left: 0.5rem;
-        white-space: nowrap;
-        font-weight: 600;
-	}
-	
-	td:nth-of-type(1):before { content: "Name"; }
-	td:nth-of-type(2):before { content: "Image"; }
-	td:nth-of-type(3):before { content: "Scientific Name"; }
-	td:nth-of-type(4):before { content: "Habitat"; }
-	td:nth-of-type(5):before { content: "Food habits"; }
-    tfoot td:before  {
-        content:" " !important;
+    tr td:nth-child(3),tr td:nth-child(4),tr td:nth-child(5) {
+        text-align: right;
+        padding-right: 5% ;
     }
+    tr td:nth-child(3):before, tr td:nth-child(4):before, tr td:nth-child(5):before {
+        position: absolute;
+        left: 5%;
+    }
+
+    tr td:nth-child(3):before{
+        content: "Scientific Name:";
+    }
+    tr td:nth-child(4):before{
+        content: "Habitat:";
+    }
+
+    tr td:nth-child(5):before{
+        content: "Food habits:";
+    }	
+	
 }
 
 @media only screen and (max-width:559px) {
@@ -644,9 +653,17 @@ table img {
     .card-item img {
         width: 90%;
     }
-
+    td {
+        font-size: 0.9em;
+    }
+    td img {
+        width: 80%;
+    }
 }
 @media only screen and (max-width:400px) {
+    p {
+        font-size: 0.95rem;
+    }
     h2 {
         font-size: 1.6rem;
     }
@@ -658,7 +675,13 @@ table img {
     #mainNav li {
         font-size: 0.8rem;
     }
+
+    td {
+        font-size: 0.75em;
+    }
+    td img {
+        width: 90%;
+    }
     
-
-
+    
 }
