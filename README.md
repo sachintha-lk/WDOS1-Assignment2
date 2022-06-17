@@ -1,3 +1,5 @@
-# WDOS1-Assignment2
+# tourism-site
 
-https://sachintha-lk.github.io/WDOS1-Assignment2/
+Assignment
+
+https://sachintha-lk.github.io/tourism-site/
