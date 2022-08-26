@@ -230,8 +230,6 @@ function resetCurrentOrder() {
 function disableFieldsIfNeeded() {
     if (currentOrder.type === "local-annual" || currentOrder.type === "foreign-annual"){
         disableFields(true);
-        // currentOrder.duration = "";
-        // currentOrder.foodToken = false;
         console.log("Disabled fields");
     
     } else {
@@ -278,91 +276,8 @@ function calculatePrice() {
         console.log(cost.type[region][passType]);
         if (durationTypeList.includes(duration)) {
             total += cost.durationCharge[region][duration];
-            // console.log(`This works  cost here is ${cost.durationCharge[region][duration]}`);
         }
-    }
-    console.log(total,region,passType,duration)
-    // // TODO If the above code works delete the if and switch logic below
-     //   // If above doesnt go back to below code, remove the - in cases
-    // // Duration based price calc
-    
-
-    // type based price calculation
-    // switch (currentOrder.type) {
-    //     case "foreign-adult":
-    //         total += cost.type.foreign.adult;
-    //         region = "foreign";
-    //         passType = "adult";
-
-    //         break;
-    //     case "foreign-child":
-    //         total += cost.type.foreign.child;
-    //         region = "foreign";
-    //         passType = "child";
-    //         break;
-    //     case "local-adult":
-    //         total += cost.type.local.adult;
-    //         region = "local";
-    //         passType = "adult";
-
-    //         break;
-    //     case "local-child":
-    //         total += cost.type.local.child;
-    //         region = "local";
-    //         passType = "child";
-
-    //         break;
-    //     case "local-annual":
-    //         total += cost.type.local.annual;
-    //         region = "local";
-    //         passType = "annual";
-
-    //         break;
-    //     case "foreign-annual":
-    //         total += cost.type.foreign.annual;
-    //         region = "foreign";
-    //         passType = "annual";
-
-    //         break;    
-    //     default:
-    //         break;
-    // }
-
-    
-    // switch (currentOrder.duration) {
-        // case "3h":
-        //     if (currentOrder.type === ("local-adult") || (currentOrder.type === "local-child")) {
-        //         total += cost.durationCharge.local.threeHours;
-        //     } else if (currentOrder.type === ("foreign-adult" ) || (currentOrder.type === "foreign-child")) {
-        //         total += cost.durationCharge.foreign.threeHours;
-        //     }
-        //     break;
-        // case "half-day":
-        //     if (currentOrder.type === ("local-adult" ) || (currentOrder.type === "local-child")) {
-        //         total += cost.durationCharge.local.halfday;
-        //     } else if (currentOrder.type === ("foreign-adult" ) || (currentOrder.type === "foreign-child")) {
-        //         total += cost.durationCharge.foreign.halfday;
-        //     }
-        
-        //     break;
-        // case "full-day":
-        //     if (currentOrder.type === ("local-adult" ) || (currentOrder.type === "local-child")) {
-        //         total += cost.durationCharge.local.fullday;
-        //     } else if (currentOrder.type === ("foreign-adult") || (currentOrder.type === "foreign-child")) {
-        //         total += cost.durationCharge.foreign.fullday;
-        //     }
-        //     break;
-        // case "2day":
-        // // Cost for 2days is calculated by multiplying cost per day by 2
-        //     if (currentOrder.type === ("local-adult" ) || (currentOrder.type === "local-child")) {
-        //         total += 2 * cost.durationCharge.local.fullday;
-        //     } else if (currentOrder.type === ("foreign-adult" ) || (currentOrder.type === "foreign-child")) {
-        //         total += 2 * cost.durationCharge.foreign.fullday;
-        //     }
-        //     break;
-        // default:
-        //     break;
-    // }
+    }    
 
     if (currentOrder.foodToken === true) {
         total += cost.extras.foodToken;
@@ -443,55 +358,4 @@ function placeOrder() {
     }
 
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*
-Psudeo code for price
-
-select type-----> switch case---->call the durationcalc function
-select duration ------> switch case ----> call the type calc fucntion
-
-*/
-
-/*
-Pricing
-
-Note: For children under age 3, entrance is free. You should mention this in
-somewhere on the ticket booking platform.
-
-Foreign Adult Pass Cost in LKR.5000
-Foreign Child Pass - available for children aged 3 to 12 years 2500
-Local Adult Pass 1000
-Local Child Pass - available for children aged 3 to 12 years 500
-Annual Pass- Foreign 15000
-Annual Pass- Local 4500
-
-Duration
-Local Adult 3 hrs or Local Child 3 hrs – no additional charge if selected this option
-Foreign Adult 3 hrs or Foreign Child 3 hrs – no additional charge if selected this option
-Local Adult 1⁄2 day or Local Child 1⁄2 day – add extra 250 LKR per person
-Foreign Adult 1⁄2 day or Foreign Child 1⁄2 day – add extra 500 LKR per person
-Local Adult full day or Local Child full day – add extra 500 LKR per person
-Foreign Adult full day or Foreign Child full day – add extra 1000 LKR per person
-
-Extras:
-Food tokens – 500 LKR per token (i.e. per pass)
-
-*/
 
