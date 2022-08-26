@@ -1,5 +1,2 @@
-# tourism-site
+# tourism-site-ticket-features
 
-Assignment
-
-https://sachintha-lk.github.io/tourism-site/

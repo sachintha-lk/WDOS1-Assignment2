@@ -86,6 +86,108 @@
                             <a href="polonnaruwa.html" target="_blank" class="btn-blue position-static">Click here to visit Polonnaruwa</a>
                         </div>
                     </div>
+                    </div>
+                    <h1>Buy Tickets here</h1>
+                        <div class="ticket-order-container">
+                            <section id="current-order-section" class="card">
+                                <h2>Current Order</h2>
+                                <div id="favorite-order-btn-container">
+                                    <button id="btn-order-fav" class="btn-with-icon btn-form"><img src="images/icons/order-favorite.svg" class="btn-icons"> Order Favorite</button>
+                                    <button id="btn-add-to-fav" class="btn-with-icon btn-form"><img src="images/icons/add-to-favorite.svg" class="btn-icons"> Add to Favorite Order</button>
+                                </div>
+                                <form id="ticket-form">
+                                    <span><b>Note</b> <br> Child tickets for age 3 - 12 <br> For children under 3 years it is free</span>
+                                    <fieldset>
+                                        <legend>Type</legend>
+                                        <label for="type">Select ticket type</label>
+                                        <select name="type" id="type" required>
+                                        <option value="" disabled selected>Select ticket type</option>
+                                        <option value="foreign-adult">Foreign Adult Pass: 5000LKR</option>
+                                        <option value="foreign-child">Foreign Child Pass: 2500LKR</option>
+                                        <option value="local-adult">Local Adult Pass: 1000LKR</option>
+                                        <option value="local-child">Local Child Pass: 500LKR</option>
+                                        <option value="local-annual">Local Annual Pass: 4500LKR</option>
+                                        <option value="foreign-annual">Foreign Annual Pass: 15000LKR</option>
+                                        </select>
+                                    </fieldset>
+                                    
+                                    <fieldset>
+                                        <legend>Number of passes</legend>
+                                        
+                                        <label for="number">Select the number of passes</label>
+                                        <input type="number" id="number" min="1" required>
+                                    </fieldset>
+                                    <fieldset>
+                                        <!-- This field should be disabled if user selects annual pass-->
+                                        <legend>Select duration</legend>
+                                        <span>Note: No extra charges for 3 hours</span>
+                                        <div class="radio-btn-grid">
+                                            <div class="radio-btn-container"> 
+                                                <input type="radio" name="duration" id="threehours" value="threehours" required>
+                                                <label for="threehours">3 Hours</label>
+                                            </div>
+                                            <div class="radio-btn-container"> 
+                                                <input type="radio" name="duration" id="halfday" value="halfday">
+                                                <label for="halfday"><sup>1</sup>/<sub>2</sub> day</label>
+                                            </div>
+                                            <div class="radio-btn-container"> 
+                                                <input type="radio" name="duration" id="fullday" value="fullday">
+                                                <label for="fullday">Full day</label>
+                                            </div>
+                                            <div class="radio-btn-container"> 
+                                                <input type="radio" name="duration" id="twodays" value="twodays">
+                                                <label for="twodays">2 days</label>
+                                            </div>
+                                        </div>
+                                    </fieldset>
+                                    <fieldset>
+                                        <!-- This field should be disabled if user selects annual pass-->
+            
+                                        <legend>Select extras</legend>
+                                        <input type="checkbox" name="extras" id="food-token" value="food-token">
+                                        <label for="food-token">Food Token: 500LKR</label>
+                                    </fieldset>
+                                    <fieldset>
+                                        <legend>Total</legend>
+                                        <div id="current-order-total">0 LKR</div>
+                                        <button id="btn-add-to-order" class="btn-form">Add to order</button>
+                                        
+                                    </fieldset>
+                                </form>
+            
+                            </section>
+                            <section id="overall-order-section" class="card">
+                                <div id="overall-order-container">
+                                    <h2>Overall Order</h2>
+                                    
+                                    <div id="overall-order-items">
+                                        <!-- NEW ORDERS FOR TESTING-->
+                                        <!-- <div class="order-item">
+                                            <div class="order-type">LOCAL-CHILD</div>
+                                            <div class="order-duration">3H</div>
+                                            <div class="order-extras">Extras: Food Token</div>
+                                            <div class="order-number-of-people">8 passes</div>
+                                            <div class="order-price"> 8000LKR</div>
+                                            <button class="remove-order btn-form" onclick="removeOrder(this)">X</button>                                          
+                                        </div>
+                                        <div class="order-item">
+                                            <div class="order-type">FOREIGN-CHILD</div>
+                                            <div class="order-duration">3H</div>
+                                            <div class="order-extras">Extras: Food Token</div>
+                                            <div class="order-number-of-people">8 passes</div>
+                                            <div class="order-price"> 8000LKR</div>
+                                            <button class="remove-order btn-form" onclick="removeOrder(this)">X</button>                                          
+                                        </div> -->
+                                         <!-- new orders end -->
+                                    </div>
+                                    <hr>
+                                    <span><b>Total</b></span>
+                                    <div id="overall-order-total">0 LKR</div>
+                                    <button id="btn-place-order" class="btn-form"> Place Order</button>
+                                    <button id="btn-check-loyalty" class="btn-form">Check Loyalty Points</button>                                    
+                                </div>
+                            </section>
+                    </div>
                     <div>
                         <a href="#top" class="btn-blue top-btn">TOP</a>
                     </div>
@@ -141,5 +243,6 @@
             -->
             </footer>
         </div>
+        <script src="scripts/tickets.js"></script>
     </body> 
 </html>
