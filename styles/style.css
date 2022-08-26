@@ -424,6 +424,235 @@ table img {
     margin: 0.5rem 0;
 }
 
+
+/* Tickets and donate styles*/
+
+.ticket-order-container {
+    display: grid;
+    gap: 0.3rem;
+    width: 95%;
+    margin: auto;
+    grid-template-columns: 1fr 2fr;
+}
+
+.ticket-order-container hr {
+    margin-top:15px;
+    color: var(--main-darker-color);
+}
+
+#overall-order-total, #current-order-total {
+    font-size: 1.5rem;
+}
+.card {
+    box-shadow: 0px 0px 6px 2px rgba(0,0,0,0.2);
+    border-radius: 5px;
+    text-align: center;
+    margin: 0.5rem;
+    background-color: #fff;
+}
+
+.btn-form {
+    border: 2px solid var(--main-darker-color);
+    padding: 0.7rem 0.8rem;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 0.9rem;
+    color: var(--main-bg-color);
+    margin:5px;
+    width: 100%;
+    background-color: var(--main-darker-color);
+    border-radius: 10px;
+    align-items: center;
+}
+.btn-with-icon {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+}
+
+
+.btn-form:hover {
+    filter: brightness(2);
+}
+
+.btn-icons {
+    height: 2em;
+    filter: invert(100%);
+    box-shadow: none;
+}
+
+#favorite-order-btn-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+
+.btn-form:active {
+    filter: brightness(2.5);
+    /* box-shadow: 0 0 5px 5px rgba(0,0,0,0.2); */
+}
+
+fieldset {
+    margin: 0.4rem;
+    border: none;
+}
+
+
+legend {
+    font-weight: 900;
+    margin: 0 auto;
+}
+
+select, input[type=number], input[type=text], input[type=tel],input[type=password] {
+    border: 1px solid var(--main-darker-color);
+    border-radius: 0.4rem;
+    font-size: 1rem;
+    width: 90%;
+    padding: 0.8rem;
+    background-color: #ffffff;
+    text-align: center;
+
+  }
+input[type=number],input[type=text], input[type=tel], input[type=password]{
+    height: 25px;
+    padding: 0.7rem 0;
+    width: 43%;
+}
+
+input[type=radio]:checked + label {
+    background-color:var(--main-darker-color);
+    color: #f0f0f0;
+    font-weight: 600 ;
+}
+
+input[type=radio]:disabled + label {
+    border-color: #d8d8d8;
+    color: rgb(147, 147, 147) ;
+    background-color: white;
+
+}
+.radio-btn-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.radio-btn-container > * {
+    display: block;
+    margin: 2px;
+}
+
+.radio-btn-container label {
+    background-color: var(--main-bg-color);
+    border: 3px solid var(--main-darker-color);
+    border-radius: 5px;
+    padding: 0.5rem;
+    /* width: 100%; */
+    
+    margin: 2px;
+}
+input[type=radio] {
+    -webkit-appearance: none;
+    opacity: 0;
+}
+
+
+
+input[type=checkbox] {
+    width: 1.5rem;
+    height: 1.5rem;
+    position: relative;
+    top: 5px;
+}
+/* .overall-order-items {
+    display: flex;
+    flex-flow:  ;
+} */
+
+.order-item {
+    /* display: flex;
+    flex-flow: row wrap;
+    */
+    margin: 5px 0px;
+    border: 1px solid var(--main-darker-color);
+    background-color: #f0f0f0;
+    border-radius: 10px;
+}
+#overall-order-items {
+    display: flex;
+    flex-direction: column;
+}
+.order-item {
+    display: grid;
+    grid-template-columns: 3fr 3fr 3fr 3fr 3fr 1fr;
+    align-items:center;
+    justify-content: center;
+}
+
+.order-item div {
+    margin: 2px 10px;
+    padding: 3px;
+    /* outline: red solid 1px; */
+}
+
+.remove-order {
+    background-color: rgb(231, 37, 37) !important;
+    width: 3rem !important;
+    color: azure;
+    font-weight: 900;
+    border: none !important;
+
+}
+/* Remove later only for testing */
+.color-box {
+    background-color: red;
+    margin: 5px;
+    width: 90%;
+    height: 2rem;
+}
+
+/* Fixed donation form  */
+#fixed-amount-donate-container {
+    width: 60%;
+    margin: 3px auto;
+}
+#fixed-donation-form {
+    margin: 0 auto;
+    text-align: center;
+}
+
+#fixed-donation-form * {
+    margin: 5px;
+}
+
+#fixed-donation-form legend {
+    margin: 5px auto;
+}
+
+#fixed-donation-form input[type=number],
+#fixed-donation-form input[type=text],
+#fixed-donation-form input[type=tel]{
+    width: 90%;
+}
+
+#fixed-donation-form input[type=password] {
+    width: 60%;
+}
+
+.cc-expiration {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+.donate-radio {
+    display:  flex;
+    flex-flow: row wrap;
+    justify-content: center;
+}
+
+#fixed-donation-form button {
+    width: 90%;
+    margin: 5px auto 10px auto;
+}
+ /* svg from uxwing.com */
+
+
 /* > 769px */ 
 @media only screen and (min-width:769px)
 {   
@@ -431,7 +660,13 @@ table img {
         background-color: var(--main-light-color);
         box-shadow: 2px 2px 10px var(--shadow-color);
         color: #000;
+    }
         
+}
+@media only screen and (max-width:1400px) {
+    .btn-with-icon {
+        grid-template-columns: 1fr;
+    }
 }
 @media only screen and (max-width:1100px) {
     .section-img-left {
@@ -442,9 +677,26 @@ table img {
         width: 100%;
         margin: 0;
     }
+
+    .order-item {
+        display: flex;
+        flex-direction: column;
+        margin: 5px auto;
+        width: 170px;
+    }
+    #overall-order-items {
+        display: flex;
+        flex-flow: row wrap;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    #fixed-amount-donate-container {
+        width: 85%;
+    }
 }
     
-}
+
 /* < 769px*/
 @media only screen and (max-width:769px)
 {   
@@ -641,7 +893,60 @@ table img {
     tr td:nth-child(5):before{
         content: "Food habits:";
     }	
+
+    .ticket-order-container {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
 	
+    .btn-form {
+        padding: 1rem 0.2rem;
+        font-size: 0.9rem;
+    }
+        
+    select, input[type=number] {
+        font-size: 16px;
+        padding: 1rem 0.2rem;
+    
+      }
+    input[type=number] {
+        padding: 1rem 0;
+        width: 43%;
+    }
+
+    .btn-with-icon {
+        grid-template-columns: 1fr 3fr;
+    }
+
+    /* Full width order items for tablet view */
+    #overall-order-items {
+        display: flex;
+        flex-direction: column;
+    }
+    .order-item {
+        display: grid;
+        grid-template-columns: 3fr 3fr 3fr 3fr 3fr 1fr;
+        width: 100%;
+    }
+
+    #fixed-amount-donate-container {
+        width: 95%;
+    }
+}
+	
+@media only screen and (max-width:590px) {
+    .order-item {
+        display: flex;
+        flex-direction: column;
+        margin: 5px auto;
+        width: 170px;
+    }
+    #overall-order-items {
+        display: flex;
+        flex-flow: row wrap;
+        align-items: center;
+        justify-content: space-between;
+    }
 }
 
 @media only screen and (max-width:559px) {
@@ -659,6 +964,17 @@ table img {
     td img {
         width: 80%;
     }
+
+    .btn-with-icon {
+        grid-template-columns: 1fr;
+    }
+
+}
+@media only screen and (max-width:450px) {
+    .order-item {
+        width: 80%;
+    }
+
 }
 @media only screen and (max-width:400px) {
     p {
@@ -683,5 +999,8 @@ table img {
         width: 90%;
     }
     
+    .order-item {
+        width: 100%;
+    }
     
 }

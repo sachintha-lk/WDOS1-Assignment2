@@ -66,6 +66,94 @@
                     </section>
                     <section>
                         <h2>Donate</h2>
+                        <div id="fixed-amount-donate-container" class="card">
+                            <h3>Fixed Donation</h3>
+                            <form id="fixed-donation-form">
+                                <fieldset>
+                                    <legend>Personal Details</legend>
+                                    <label for="fullname" >Full Name </label><br>
+                                    <input type="text" id="fullname" name="fullname" placeholder="Full Name" required><br>
+                                    <label for="address" >Address </label><br>
+                                    <input type="text" id="address" name="address" placeholder="Address" required><br>
+                                    <label for="email">Email </label><br>
+                                    <input type="text" id="email" name="email"placeholder="user@example.com" required>
+                                </fieldset>
+                                <fieldset>
+                                    <legend>Credit Card Details</legend>
+                                    <label for="cc-number">Credit Card No.</label>
+                                    <input type="text" name="cc-number" id="cc-number" placeholder="xxxx xxxx xxxx xxxx" maxlength="16" required><br>
+                                    <div class="cc-expiration">
+                                        <div class="expiry-month-container">
+                                            <label for="expiry-month">Month</label><br>
+                                            <select name="expiry-month" id="expiry-month" required> 
+                                                <option value="" disabled selected>Select Expiration Month</option>                                       
+                                                <option value="1">01</option>
+                                                <option value="2">02</option>
+                                                <option value="3">03</option>
+                                                <option value="4">04</option>
+                                                <option value="5">05</option>
+                                                <option value="6">06</option>
+                                                <option value="7">07</option>
+                                                <option value="8">08</option>
+                                                <option value="9">09</option>
+                                                <option value="10">10</option>
+                                                <option value="11">11</option>
+                                                <option value="12">12</option>
+                                            </select>
+                                        </div>
+                                        <div class="expiry-year-container">
+                                            <label for="expiry-year">Year</label><br>
+                                            <select name="expiry-year" id="expiry-year" required>                                        
+                                                <option value="" disabled selected>Select Expiration Year </option>
+                                                <!-- Year options are filled using javascript-->
+                                            </select>
+                                        </div>
+                                        <div id="cvv-container">
+                                            <label for="cvv">CVV</label><br>
+                                            <input type="password" maxlength="3" id="cvv" required>
+                                        </div>
+                                    </div>
+                                </fieldset>
+                                <fieldset>
+                                    <legend>Donation amount</legend>
+                                    <span>Select the donation amount</span><br>
+                                    <div class="donate-radio">
+                                        <div class="radio-btn-container">
+                                            <input type="radio" name="donation-amount" id="100" value="100" required>
+                                            <label for="100">100 LKR</label>
+                                        </div>
+                                        <div class="radio-btn-container">
+                                            <input type="radio" name="donation-amount" id="250" value="250">
+                                            <label for="250">250 LKR</label>
+                                        </div>
+                                        <div class="radio-btn-container">
+                                            <input type="radio" name="donation-amount" id="500" value="500">
+                                            <label for="500">500 LKR</label>
+                                        </div>
+                                        <div class="radio-btn-container">
+                                            <input type="radio" name="donation-amount" id="1000" value="1000">
+                                            <label for="1000">1000 LKR</label>
+                                        </div>
+                                        <div class="radio-btn-container">
+                                            <input type="radio" name="donation-amount" id="2500" value="2500">
+                                            <label for="2500">2500 LKR</label>
+                                        </div>
+                                        <div class="radio-btn-container">
+                                            <input type="radio" name="donation-amount" id="5000" value="5000">
+                                            <label for="5000">5000 LKR</label>
+                                        </div>
+                                        <div class="radio-btn-container">
+                                            <input type="radio" name="donation-amount" id="10000" value="10000">
+                                            <label for="10000">10000 LKR</label>
+                                        </div>
+                                    </div>
+                                </fieldset>
+                                <fieldset>
+                                    <legend>Confirm donation</legend>
+                                    <button id="donate-button" class="btn-form">Donate</button>
+                                </fieldset>
+                            </form>
+                        </div>
                         <div id="donate-container">
                             <div>
                                 <h3>Little Hearts</h3>
@@ -160,5 +248,6 @@
                 -->
             </footer>
         </div>
+        <script src="/scripts/donations.js"></script>
     </body> 
 </html>
